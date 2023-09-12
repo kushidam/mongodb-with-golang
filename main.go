@@ -12,14 +12,6 @@ import (
 )
 
 func main() {
-	// if err := godotenv.Load(); err != nil {
-	// 	log.Println("No .env file found")
-	// }
-
-	// uri := os.Getenv("MONGODB_URI")
-	// if uri == "" {
-	// 	log.Fatal("You must set your 'MONGODB_URI' environment variable. See\n\t https://www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
-	// }
 	uri := "http://localhost:27017"
 	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(uri))
 	if err != nil {
